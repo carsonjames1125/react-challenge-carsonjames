@@ -31,9 +31,48 @@ export function Project({ project }) {
                         {project.description}
                     </Typography>
                 </CardContent>
-                <CardActions style={{ justifyContent: 'center' }}
+                <CardActions style={{ justifyContent: 'center' }}>
+                    <Button
+                    id="portfolio-button"
+                    className='on-hover'
+                    href={project.liveLink}
+                    size="small"
+                    >
+                        Live Web URL
+                    </Button>
+                    <Button
+                    id="portfolio-button"
+                    className="on-hover"
+                    href={project.gitHub}
+                    size="small"
+                    >
+                        GitHub
+                    </Button>
+                </CardActions>
             </Card>
         </Grid>
-    )
+    );
+}
+
+//function to overwrite project.js array 
+
+export default function Work() {
+    return (
+        <div style={{ paddingLeft: '35px', paddingRight: '35px' }}>
+            <h1 style={{ display:'flex', justifyContent:'center' }}>Portfolio</h1>
+            <Grid 
+            container
+            spacing={{ xs: 2, md: 3 }}
+            columns={{ xs: 4, sm: 8, md: 12 }}
+            >
+                {Array.from(Array(6)).map((_, index)=> (
+                    <Grid item xs={2} sm={4} md={4} key={index}></Grid>
+                ))}
+                {projects.map((project, index)=> (
+                    <Project project={project} key={index} />
+                ))}
+            </Grid>
+        </div>
+    );
 }
 
