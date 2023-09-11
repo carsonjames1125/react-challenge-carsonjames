@@ -1,4 +1,4 @@
-# React Portfolio - Carson James>
+# React Portfolio - Carson James
 
 ## Description
 
@@ -12,7 +12,7 @@ npm i
 
 GitHub: https://github.com/carsonjames1125/react-challenge-carsonjames
 
-URL:
+URL: https://carsonjames1125.github.io/react-challenge-carsonjames/
 
 ![alt text](./images/image1.png)
 ![alt text](./images/image2.png)
